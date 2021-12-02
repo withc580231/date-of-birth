@@ -32,7 +32,7 @@ export default {
     title: {
       type: Object,
       default: {
-        yaer: 'Year',
+        year: 'Year',
         month: 'Month',
         day: 'Day'
       }
