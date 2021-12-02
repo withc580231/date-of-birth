@@ -30,6 +30,7 @@ export default {
       default: '100%',
     },
     title: {
+      required: true,
       type: Object,
       default: {
         year: 'Year',

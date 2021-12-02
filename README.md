@@ -41,9 +41,9 @@ methods: {
 ```
 ## 参数说明
 ``` bash
-# width
+# width (required: false)
 该组件的宽度
-# title
+# title (required: true)
 该组件中的title，分别对应年月日，可自定义
 # @change
 该组件返回的值
