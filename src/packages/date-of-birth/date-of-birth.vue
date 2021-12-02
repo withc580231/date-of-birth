@@ -1,20 +1,20 @@
 <template>
   <div class="date-of-birth" :style="{width:width}">
     <div class="relative">
-      <span class="title" v-if="showYear">Year</span>
-      <el-select v-model="year" style="width:100%" @change="selectYear" :class="showYear?'select':''" placeholder="Year">
+      <span class="title" v-if="showYear">{{title.year}}</span>
+      <el-select v-model="year" style="width:100%" @change="selectYear" :class="showYear?'select':''" :placeholder="title.year">
         <el-option v-for="(item,index) in yearList" :key="index" :value="item.value" :label="item.name"></el-option>
       </el-select>
     </div>
     <div class="relative mgl">
-      <span class="title" v-if="showMonth">Month</span>
-      <el-select v-model="month" style="width:100%" @change="selectMonth" :class="showMonth?'select':''" placeholder="Year">
+      <span class="title" v-if="showMonth">{{title.month}}</span>
+      <el-select v-model="month" style="width:100%" @change="selectMonth" :class="showMonth?'select':''" :placeholder="title.month">
         <el-option v-for="(item,index) in monthList" :key="index" :value="item.value" :label="$translate(item.name)"></el-option>
       </el-select>
     </div>
     <div class="relative">
-      <span class="title" v-if="showDay">Day</span>
-      <el-select v-model="day" style="width:100%;" @change="selectDay" :class="showDay?'select':''" placeholder="Year">
+      <span class="title" v-if="showDay">{{title.day}}</span>
+      <el-select v-model="day" style="width:100%;" @change="selectDay" :class="showDay?'select':''" :placeholder="title.day">
         <el-option v-for="(item,index) in dayList" :key="index" :value="item.value" :label="item.name"></el-option>
       </el-select>
     </div>
@@ -29,6 +29,14 @@ export default {
       type: String,
       default: '100%',
     },
+    title: {
+      type: Object,
+      default: {
+        yaer: 'Year',
+        month: 'Month',
+        day: 'Day'
+      }
+    }
   },
   created() {
     this.monthList = [];

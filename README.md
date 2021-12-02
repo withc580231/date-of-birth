@@ -1,15 +1,12 @@
 # date-of-birth
 
-> 出生日期时间选择器
-## 安装前准备
+> 日期时间选择器
+## 安装依赖前准备
 
 ```
-1：需安装Vue(vue/cli版本3.0以上)；
-2：需安装SCSS；
-3：需装Element-UI；
-4：Vue原型上需要有个$translate函数用于翻译，例如当前语言为Chinese
+1：需安装Vue；
+2：需安装Element-UI；
 
-$translate('Hello'); // 您好
 ```
 ## 安装依赖
 
@@ -18,4 +15,36 @@ $translate('Hello'); // 您好
 npm install date-of-birth --save
 # or with yarn
 yarn add date-of-birth
+```
+## 使用步骤
+``` bash
+# 在main.js中引入并注册
+import DateOfBirth from 'date-of-birth';
+Vue.use(DateOfBirth);
+# 在页面中使用
+<date-of-birth width="100%" @change="getValue" :title="title"></date-of-birth>
+
+data () {
+  return {
+    title: {
+      year: 'Year',
+      month: 'Month',
+      dat: 'Day',
+    }
+  }
+}
+methods: {
+  getValue (value) {
+    console.log(value); // 'YYYY-MM-DD'
+  }
+}
+```
+## 参数说明
+``` bash
+# width
+该组件的宽度
+# title
+该组件中的title，分别对应年月日，可自定义
+# @change
+该组件返回的值
 ```
