@@ -7,8 +7,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'maucash.js',
-    library: 'maucash',
+    filename: 'date.js',
+    library: 'date',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

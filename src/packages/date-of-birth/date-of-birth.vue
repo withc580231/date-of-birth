@@ -57,7 +57,7 @@ export default {
       this.showDay = true;
       if (this.year && this.month && this.day) {
         let birth = this.year + '-' + this.month + '-' + this.day;
-        this.$emit('change',birth);
+        this.$emit('change', birth);
       } else {
         this.$emit('change', null);
       }
@@ -113,7 +113,7 @@ export default {
       }
       if (this.year && this.month && this.day) {
         let birth = this.year + '-' + this.month + '-' + this.day;
-        this.$emit('change',birth);
+        this.$emit('change', birth);
       } else {
         this.$emit('change', null);
       }
@@ -149,33 +149,31 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style>
 .date-of-birth {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .relative {
-    position: relative;
-    .title {
-      position: absolute;
-      top: 7px;
-      left: 16px;
-      color: #888;
-      font-family: 'Montserrat-Italic';
-      line-height: 24px;
-      font-size: 16px;
-    }
-  }
-  .mgl{
-    margin: 0 8px;
-  }
-  .select {
-    .el-input--suffix .el-input__inner {
-      padding-top: 16px;
-      height: 58px;
-      background: transparent;
-      transition: all 0.2s;
-    }
-  }
+}
+.date-of-birth .relative {
+  position: relative;
+}
+.date-of-birth .relative .title {
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  color: #888;
+  font-family: 'Montserrat-Italic';
+  line-height: 24px;
+  font-size: 16px;
+}
+.date-of-birth .mgl {
+  margin: 0 8px;
+}
+.date-of-birth .select .el-input--suffix .el-input__inner {
+  padding-top: 16px;
+  height: 58px;
+  background: transparent;
+  transition: all 0.2s;
 }
 </style>
