@@ -1,7 +1,7 @@
 {
   "name": "date-of-birth",
   "description": "date of birth",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "huangcheng",
   "license": "MIT",
   "private": false,
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+git@git.xxxx.com:maucash/maucash.git"
+    "url": "https://github.com/withc580231/date-of-birth"
   },
   "files": [
     "dist",
@@ -41,7 +41,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.0",
+    "sass-loader": "^7.3.1",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

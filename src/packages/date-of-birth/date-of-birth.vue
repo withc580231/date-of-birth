@@ -149,7 +149,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .date-of-birth {
   display: flex;
   align-items: center;
