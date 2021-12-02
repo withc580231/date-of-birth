@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'DateOfBirth',
   props: {
     width: {
       type: String,
